@@ -12,14 +12,16 @@ public class signinscreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signinscreen);
     }
-public void na1(View viwe){
-    startActivity(new Intent(this, user.class));
-}
-    public void na2(View viwe){
+
+    public void na1(View viwe) {
+        startActivity(new Intent(this, user.class));
+    }
+
+    public void na2(View viwe) {
         startActivity(new Intent(this, signup.class));
     }
 
-    public void so(View vwe){
+    public void so(View vwe) {
         startActivity(new Intent(this, owner.class));
     }
 }
