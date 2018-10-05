@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".signinscreen" />
         <activity android:name=".signup" />
+        <activity android:name=".user" />
+        <activity android:name=".owner" />
     </application>
 
 </manifest>

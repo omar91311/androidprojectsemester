@@ -6,51 +6,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.AppCompatAutoCompleteTextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/a1"
-        android:text="Logo"
+        android:text="Logo" 
+		app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/extractEditText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
-    <android.inputmethodservice.ExtractEditText
+    <EditText
         android:id="@+id/extractEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Email orusername"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="160dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/a1"
+        app:layout_constraintBottom_toTopOf="@+id/a3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-    <android.inputmethodservice.ExtractEditText
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/a3"
-        android:hint="Password" />
+        android:hint="Password"
+        app:layout_constraintTop_toBottomOf="@+id/extractEditText"
+        app:layout_constraintBottom_toTopOf="@+id/j"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <Button
-        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User/Owner/DeliveryBoy"/>
+        android:id="@+id/j"
+        android:text="Sign In as Owner"
+        android:onClick="so"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/a3"/>
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
         android:onClick="na1"
-        android:text="Sign In"/>
+        android:text="Sign In As User"
+        app:layout_constraintTop_toBottomOf="@+id/j"
+        app:layout_constraintBottom_toTopOf="@+id/su"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="na2"
-        android:text="sign up"
-         />
+        android:text="Sign Up"
+        android:id="@+id/su"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
